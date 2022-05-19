@@ -11,6 +11,7 @@ class Constants {
     public static $emailTaken = "E-mail is already in use.";
     public static $passwordsDontMatch = "Passwords don't match";
     public static $passwordLength = "Password must be between 5 and 25 characters.";
+    public static $loginFailed = "Username or password was incorrect.";
 }
 
 ?>
