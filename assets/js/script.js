@@ -3,7 +3,7 @@ function volumeToggle(button){
     $(".previewVideo").prop("muted", !muted);
 
     $(button).find("i").toggleClass("fa-volume-mute");
-    $(button).find("i").toggleClass("fa-solid fa-volume");
+    $(button).find("i").toggleClass("fa-volume-up");
 }
 
 function previewEnded() {

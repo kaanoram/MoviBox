@@ -1,8 +1,9 @@
 <?php
     require_once("includes/config.php");
     require_once("includes/classes/PreviewProvider.php");
+    require_once("includes/classes/CategoryContainers.php");
     require_once("includes/classes/Entity.php");
-
+    require_once("includes/classes/EntityProvider.php");
     if (!isset($_SESSION["userLoggedIn"])){
         header("Location: register.php");
     }
@@ -26,4 +27,4 @@
     <script src="assets/js/script.js"></script>
 </head>
 <body>
-    <div class = 'wrapper'></div>
+    <div class = 'wrapper'>
