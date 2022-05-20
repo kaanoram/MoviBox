@@ -1,5 +1,5 @@
 <?php
-class Videos {
+class Video {
     
     private $con, $sqlData, $entity;
 
