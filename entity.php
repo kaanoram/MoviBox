@@ -12,5 +12,10 @@ $preview = new PreviewProvider($con, $userLoggedIn);
 echo $preview->createPreviewVideo($entity);
 
 $seasonProvider = new SeasonProvider($con, $userLoggedIn);
-$seasonProvider->create($entity);
+echo $seasonProvider->create($entity);
+
+$categoryContainers = new CategoryContainers($con, $userLoggedIn);
+echo $categoryContainers->showCategory($entity->getCategoryId(), "You might also like");
+
+
 ?>

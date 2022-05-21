@@ -12,7 +12,7 @@ class Entity {
             $query->bindValue(":id", $input);
             $query->execute();
 
-            $this->sqlData = query->fetch(PDO::FETCH_ASSOC);
+            $this->sqlData = $query->fetch(PDO::FETCH_ASSOC);
         }
     }
 
@@ -30,6 +30,10 @@ class Entity {
 
     public function getPreview() {
         return $this->sqlData["preview"];
+    }
+
+    public function getCategoryId() {
+        return $this->sqlData["categoryId"];
     }
 
     public function getSeasons() {
