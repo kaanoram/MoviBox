@@ -22,8 +22,10 @@
             $videoId = VideoProvider::getEntityVideoForUser($this->con, $id, $this->username);
             $video = new Video($this->con, $videoId);
 
+            $isInProgress = $video->isInProgress($this->username);
+            $playButtonText = $isInProgress ? "Continue watching" : "Play";
             $seasonEpisode = $video->getSeasonAndEpisode();
-            $subHeading = $video->isMovie() ? "" : "<h4>$seasonEpisode</h4>"
+            $subHeading = $video->isMovie() ? "" : "<h4>$seasonEpisode</h4>";
 
             return "<div class = 'previewContainer'>
                         <img src = '$thumbnail' class = 'previewImage' hidden>

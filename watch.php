@@ -34,5 +34,5 @@ $upNextVideo = VideoProvider::getUpNext($con, $video);
     </video>
 </div>
 <script>
-    initVideo("<?php echo $video->getId(); ?>", "<?php echo $userLoggedIn; ?>");
+    initVideo("<?php echo $video->getId();?>", "<?php echo $userLoggedIn;?>");
 </script>

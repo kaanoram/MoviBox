@@ -38,7 +38,7 @@ function updateProgressTimer(videoId, username){
 
     let timer;
     $("video").on("playing", function(event){
-        window.clearInterval();
+        window.clearInterval(timer);
         timer = window.setInterval(function() {
             updateProgress(videoId, username, event.target.currentTime);
         }, 3000);
@@ -49,9 +49,11 @@ function updateProgressTimer(videoId, username){
     });
 }
 
-function addDuration() {
+function addDuration(videoId, username) {
     $.post("ajax/addDuration.php", {videoId: videoId, username: username}, function(data) {
-        if(data !== null && data !== "") {
+        if(data !== null && data !== " ") {
+            console.log("add duration");
+            console.log(data);
             alert(data);
         }
     });
@@ -59,23 +61,29 @@ function addDuration() {
 
 function updateProgress(videoId, username, progress) {
     $.post("ajax/updateDuration.php", {videoId: videoId, username: username, progress: progress}, function(data) {
-        if(data !== null && data !== "") {
+        if(data !== null && data !== " ") {
+            console.log("update progress");
+            console.log(data);
             alert(data);
         }
     });
 }
 
 function setFinished(videoId, username){
-    $.post("ajax/setFinished.php", {videoId: videoId, username: username, progress: progress}, function(data) {
-        if(data !== null && data !== "") {
+    $.post("ajax/setFinished.php", {videoId: videoId, username: username}, function(data) {
+        if(data !== null && data !== " ") {
+            console.log("set finished");
+            console.log(data);
             alert(data);
         }
     });
 }
 
 function setStartTime(videoId, username){
-    $.post("ajax/getProgress.php", {videoId: videoId, username: username, progress: progress}, function(data) {
+    $.post("ajax/getProgress.php", {videoId: videoId, username: username}, function(data) {
         if(isNaN(data)) {
+            console.log("get progress");
+            console.log(data);
             alert(data);
             return;
         }

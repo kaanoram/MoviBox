@@ -24,7 +24,7 @@ a {
 }
 
 .wrapper {
-    width: 100%;
+    width: 1050px;
     min-height: 100%;
     background-color: #141414;
 }
@@ -126,6 +126,12 @@ a {
 .previewOverlay .mainDetails h3 {
     color: #fff;
     font-size: 40px;
+    margin: 15px 0;
+}
+
+.previewOverlay .mainDetails h4 {
+    color: #fff;
+    font-size: 20px;
     margin: 15px 0;
 }
 

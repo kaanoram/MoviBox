@@ -8,15 +8,6 @@ if(isset($_POST["videoId"]) && isset($_POST["username"]) && isset($_POST["progre
     $query->bindValue(":progress", $_POST["progress"]);
 
     $query->execute();
-
-    if($query->rowCount() == 0){
-        $query = $con->prepare("INSERT INTO videoprogress (username, videoId)
-                                VALUES(:username, :videoId)");
-        $query->bindValue(":username", $_POST["username"]);
-        $query->bindValue(":videoId", $_POST["videoId"]);
-
-        $query->execute();
-    }
 }else{
     echo "No videoId or username passed into file";
 }
