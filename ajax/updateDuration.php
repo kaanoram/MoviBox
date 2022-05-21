@@ -1,7 +1,7 @@
 <?php
 require_once("../includes/config.php");
 if(isset($_POST["videoId"]) && isset($_POST["username"]) && isset($_POST["progress"])){
-    $query = $con->prepare("UPDATE videoProgres SET progress=:progress,
+    $query = $con->prepare("UPDATE videoprogress SET progress=:progress,
                             dateModified=NOW() WHERE username=:username AND videoId=:videoId");
     $query->bindValue(":username", $_POST["username"]);
     $query->bindValue(":videoId", $_POST["videoId"]);
@@ -10,7 +10,7 @@ if(isset($_POST["videoId"]) && isset($_POST["username"]) && isset($_POST["progre
     $query->execute();
 
     if($query->rowCount() == 0){
-        $query = $con->prepare("INSERT INTO videoProgress (username, videoId)
+        $query = $con->prepare("INSERT INTO videoprogress (username, videoId)
                                 VALUES(:username, :videoId)");
         $query->bindValue(":username", $_POST["username"]);
         $query->bindValue(":videoId", $_POST["videoId"]);
