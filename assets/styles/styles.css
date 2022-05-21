@@ -24,7 +24,7 @@ a {
 }
 
 .wrapper {
-    width: 1050px;
+    width: 100%;
     min-height: 100%;
     background-color: #141414;
 }
@@ -301,4 +301,8 @@ button i {
 
 .upNextContainer h2, .upNextContainer h3 {
     color: #fff;
+}
+
+.watchNav {
+    z-index: 2;
 }
