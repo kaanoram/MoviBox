@@ -34,3 +34,9 @@ require_once("includes/classes/VideoProvider.php");
 </head>
 <body>
     <div class = 'wrapper'>
+
+<?php
+if(!isset($hideNav)){
+    include_once("includes/navBar.php");
+}
+?>
