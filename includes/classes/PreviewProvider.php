@@ -37,7 +37,7 @@
                                 <h3>$name</h3>
                                 $subHeading
                                 <div class = 'buttons'>
-                                    <button onclick = 'watchVideo($videoId)'><i class='fa-solid fa-play'></i> Play</button>
+                                    <button onclick = 'watchVideo($videoId)'><i class='fa-solid fa-play'></i> $playButtonText</button>
                                     <button onclick='volumeToggle(this)'><i class='fas fa-volume-mute'></i></button>
                                 </div>
                             </div>
