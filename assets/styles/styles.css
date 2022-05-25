@@ -21,10 +21,11 @@ a h3:hover {
 
 a {
     text-decoration: none;
+    color: #0654ba;
 }
 
 .wrapper {
-    width: 1050px;
+    min-width: 1050px;
     min-height: 100%;
     background-color: #141414;
 }
@@ -38,7 +39,7 @@ a {
 }
 
 .column {
-    background-color: #ffff;
+    background-color: #fff;
     min-height: 300px;
     max-height: 100%;
     width: 450px;
@@ -50,6 +51,7 @@ a {
 .column form {
     display: flex;
     flex-direction: column;
+    padding-top: 24px;
 }
 
 .column form input[type="text"],
@@ -439,4 +441,10 @@ button i {
 
 .alertSuccess {
     color: #2ecc71;
+}
+
+.formSection h3 {
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
 }

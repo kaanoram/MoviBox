@@ -4,5 +4,5 @@
     echo $preview->createTVShowPreviewVideo();
 
     $containers = new CategoryContainers($con, $userLoggedIn);
-    echo $containers->showMoviesCategories();
+    echo $containers->showTVShowCategories();
 ?>
