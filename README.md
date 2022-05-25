@@ -9,3 +9,12 @@ Here is the view of a TV show:
 
 Here is the view of the searching functionality:
 ![Search view](/assets/videos/search.gif)
+
+Here is the view of the sign-in page:
+![Sign-in view](/assets/images/signin.png)
+
+Here is the view of the sign-up page:
+![Sign-up view](/assets/images/signup.png)
+
+Here is the view of the profile page and the PayPal subscription functionality:
+![Profile view](/assets/images/profile.gif)
