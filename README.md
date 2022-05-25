@@ -17,4 +17,4 @@ Here is the view of the sign-up page:
 ![Sign-up view](/assets/images/signup.png)
 
 Here is the view of the profile page and the PayPal subscription functionality:
-![Profile view](/assets/images/profile.gif)
+![Profile view](/assets/videos/profile.gif)
